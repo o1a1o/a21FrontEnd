@@ -107,6 +107,7 @@
   export default {
     data() {
       return {
+        activeIndex:'/YWhome',
         menu: [
           {
             path: "/YWhome",
