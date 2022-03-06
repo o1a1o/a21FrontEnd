@@ -1,7 +1,10 @@
 <template>
   <header>
-    <p id="tit">欢迎来到三湘银行服务系统 ！</p>
-    <div id="logout" @click="logout">退出</div>
+    <p id="tit">Welcome ！</p>
+    <el-avatar icon="el-icon-user-solid" style="position:relative;left:750px"></el-avatar>
+    <div id="logout" @click="logout">
+      退出
+    </div>
   </header>
 </template>
 

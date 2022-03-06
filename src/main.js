@@ -9,6 +9,8 @@ import store from './store'
 import * as echarts from 'echarts'
 import api from './api/'
 import '@/assets/icon/iconfont.css'
+import 'bpmn-js/dist/assets/diagram-js.css';
+import 'bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css';
 Vue.prototype.$echarts = echarts
 Vue.prototype.$api = api;
 

@@ -26,6 +26,7 @@ export default new Router({
       name:'Reg2',
       component:()=>import('../views/Reg2.vue'),
     },
+    
     {
       path: '/Index',
       name: 'Index',
@@ -60,6 +61,32 @@ export default new Router({
           path: "/YWgeren",
           name: "YWgeren",
           component:()=>import('../views/YW/YWgeren.vue'),
+        },
+
+        {
+          path: "/BPhome",
+          name: "BPhome",
+          component:()=>import('../views/BP/BPhome.vue'),
+        },
+        {
+          path: "/BPnew",
+          name: "BPnew",
+          component:()=>import('../views/BP/BPnew.vue'),
+        },
+        {
+          path: "/BPalready",
+          name: "BPalready",
+          component:()=>import('../views/BP/BPalready.vue'),
+        },
+        {
+          path: "/BPlog",
+          name: "BPlog",
+          component:()=>import('../views/BP/BPlog.vue'),
+        },
+        {
+          path:'/bpxxlog',
+          name:'bpxxlog',
+          component:()=>import('../views/BP/bpxxlog.vue'),
         },
       ]
     }

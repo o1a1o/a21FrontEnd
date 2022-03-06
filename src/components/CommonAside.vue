@@ -7,10 +7,11 @@
     text-color="#fff"
     active-text-color="#ffd04b"
   >
-     <div id="zuoshang">
+     <!-- <div id="zuoshang">
       <el-avatar> user </el-avatar>
-    </div>
-    <h3 id="topline" v-show="!isCollapse">业务人员端</h3>
+    </div> -->
+    &nbsp;<img src="@/img/logo1.png" style="width:90px;margin-top:50px;margin-bottom:45px;">
+    <!-- <h3 id="topline" v-show="!isCollapse">业务人员端</h3> -->
     <h3 v-show="isCollapse"></h3>
     <el-menu-item 
       
@@ -81,18 +82,14 @@
     line-height: 48px;
   }
   #topline{
-    line-height: 15px;
-    font-size: 15px;
+    line-height: 13px;
+    font-size: 13px;
   }
  .el-menu-vertical-demo:not(.el-menu--collapse) {
     width: 100px;
     min-height: 600px;
   }
-  #zuoshang{
-    padding-left: 28px;
-    padding-top:28px ;
-    width: 51px;
-  }
+ 
   /* 选中后样式 */
    .el-menu-item.is-active {
         /* border-left:#006EFF solid 6px !important; */
@@ -147,8 +144,34 @@
             name: "YWgeren",
             label: "个人信息",
             icon: "YWgeren",
-
           },
+
+
+          {
+            path: "/BPhome",
+            name: "BPhome",
+            label: "首页",
+            icon: "YWhome",
+          },
+          {
+            path: "/BPnew",
+            name: "BPnew",
+            label: "发布新产品",
+            icon: "YWhome",
+          },
+          {
+            path: "/BPalready",
+            name: "BPalready",
+            label: "已发布产品",
+            icon: "YWhome",
+          },
+          {
+            path: "/BPlog",
+            name: "BPlog",
+            label: "日志查看",
+            icon: "YWhome",
+          },
+        
         
         ],
       }

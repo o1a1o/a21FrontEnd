@@ -24,6 +24,7 @@
             </el-form>
         </div>
         <router-link  to="/YWhome" id="ahref">业务人员端</router-link>
+        <router-link  to="/BPhome" id="ahref">编排人员端</router-link>
     </div>
 </template>
 
