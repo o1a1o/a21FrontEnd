@@ -39,6 +39,7 @@
         :formatter="formatter">
         </el-table-column>
         <el-table-column
+        align="center"
         width="250">
         <!-- eslint-disable-next-line -->
         <template slot="header" slot-scope="scope">
@@ -50,7 +51,7 @@
         <!-- eslint-disable-next-line -->
         <template slot-scope="scope">
             <router-link  to="/bpxxlog">
-                <el-button  size="mini" type="primary" >查看</el-button>
+                <el-button  size="mini" type="text" >查看</el-button>
             </router-link>
         </template>
         </el-table-column>

@@ -171,6 +171,18 @@
             label: "日志查看",
             icon: "YWhome",
           },
+          {
+            path: "/BPmessage",
+            name: "BPmessage",
+            label: "消息列表",
+            icon: "YWhome",
+          },
+          {
+            path: "/BPmanage",
+            name: "BPmanage",
+            label: "编排人员管理",
+            icon: "YWhome",
+          },
         
         
         ],

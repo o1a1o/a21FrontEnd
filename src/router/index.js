@@ -43,6 +43,11 @@ export default new Router({
           component:()=>import('../views/YW/YWreleasedProduct.vue'),
         },
         {
+          path:"/YWalreadyxx",
+          name:"YWalreadyxx",
+          component:()=>import('../views/YW/YWalreadyxx.vue'),
+        },
+        {
           path: "/YWshowProduct",
           name: "YWshowProduct",
           component:()=>import('../views/YW/YWshowProduct.vue'),
@@ -79,6 +84,11 @@ export default new Router({
           component:()=>import('../views/BP/BPalready.vue'),
         },
         {
+          path:'/BPalreadyxx',
+          name:"BPalreadyxx",
+          component:()=>import('../views/BP/BPalreadyxx.vue'),
+        },
+        {
           path: "/BPlog",
           name: "BPlog",
           component:()=>import('../views/BP/BPlog.vue'),
@@ -87,6 +97,26 @@ export default new Router({
           path:'/bpxxlog',
           name:'bpxxlog',
           component:()=>import('../views/BP/bpxxlog.vue'),
+        },
+        {
+          path:'/bphomexx',
+          name:'bphomexx',
+          component:()=>import('../views/BP/bphomexx.vue'),
+        },
+        {
+          path: "/BPmessage",
+          name: "BPmessage",
+          component:()=>import('../views/BP/BPmessage.vue'),
+        },
+        {
+          path: "/BPmes1xx",
+          name: "BPmes1xx",
+          component:()=>import('../views/BP/BPmes1xx.vue'),
+        },
+        {
+          path:'/BPmanage',
+          name:"BPmanage",
+          component:()=>import('../views/BP/BPmanage.vue'),
         },
       ]
     }
