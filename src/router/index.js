@@ -63,6 +63,11 @@ export default new Router({
           component:()=>import('../views/YW/YWcustomer.vue'),
         },
         {
+          path:'/YWcxx',
+          name:'/YWcxx',
+          component:()=>import('../views/YW/YWcxx.vue'),
+        },
+        {
           path: "/YWgeren",
           name: "YWgeren",
           component:()=>import('../views/YW/YWgeren.vue'),
