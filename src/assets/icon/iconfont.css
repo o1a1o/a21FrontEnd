@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "element-icons"; /* Project id 3219372 */
+  src: url('iconfont.woff2?t=1646307706660') format('woff2'),
+       url('iconfont.woff?t=1646307706660') format('woff'),
+       url('iconfont.ttf?t=1646307706660') format('truetype');
+}
+
+.element-icons {
+  font-family: "element-icons" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.el-icon-YWmessage:before {
+  content: "\e73c";
+}
+
+.el-icon-YWshowProduct:before {
+  content: "\e71a";
+}
+
+.el-icon-YWhome:before {
+  content: "\e60c";
+}
+
+.el-icon-YWreleasedProduct:before {
+  content: "\e651";
+}
+
+.el-icon-YWcustomer:before {
+  content: "\e66f";
+}
+
+.el-icon-YWgeren:before {
+  content: "\e670";
+}
+

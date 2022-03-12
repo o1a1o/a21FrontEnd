@@ -1,0 +1,51 @@
+{
+  "id": "3219372",
+  "name": "element",
+  "font_family": "element-icons",
+  "css_prefix_text": "el-icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7140472",
+      "name": "消息",
+      "font_class": "YWmessage",
+      "unicode": "e73c",
+      "unicode_decimal": 59196
+    },
+    {
+      "icon_id": "680974",
+      "name": "产品2",
+      "font_class": "YWshowProduct",
+      "unicode": "e71a",
+      "unicode_decimal": 59162
+    },
+    {
+      "icon_id": "719132",
+      "name": "首页",
+      "font_class": "YWhome",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "809958",
+      "name": "产品预约",
+      "font_class": "YWreleasedProduct",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "2742645",
+      "name": "客户",
+      "font_class": "YWcustomer",
+      "unicode": "e66f",
+      "unicode_decimal": 58991
+    },
+    {
+      "icon_id": "5651479",
+      "name": "个人",
+      "font_class": "YWgeren",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    }
+  ]
+}
