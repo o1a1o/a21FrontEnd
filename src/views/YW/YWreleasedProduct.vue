@@ -8,6 +8,7 @@
             <div id="datalist">数据列表</div>
              <el-table
                  border
+                 :model="xxData"
                 :data="xxData.filter(data => !search || data.p_name.toLowerCase().includes(search.toLowerCase()))"
                 style="width: 100%">
                 <el-table-column
@@ -20,12 +21,14 @@
                 prop="p_startDay"
                 label="上架日期"
                 align="center"
+                sortable
                 width="180">
                 </el-table-column>
                 <el-table-column
                 prop="p_endDay"
                 label="下架日期"
                 align="center"
+                sortable
                 width="180">
                 </el-table-column>
                 <el-table-column
@@ -91,7 +94,6 @@
     margin:40px;
     margin-left: 75px;
     font-size: 20px;
-    /* padding-bottom:40px */
 }    
 .el-table{
     margin-left: 30px;
@@ -261,6 +263,16 @@
         },{
             p_id:'2587372271',
             p_startDay:'2013-08-16',
+            p_endDay:'2109-12-21',
+            p_name:'长虹一号',
+            p_total:'313222212311',
+            p_rest:'2224141412',
+            u_id:'23114',
+            u_id2:'23142',
+            p_status:1,
+        },{
+            p_id:'2587372271',
+            p_startDay:'2003-08-16',
             p_endDay:'2139-12-21',
             p_name:'长虹一号',
             p_total:'313222212311',
@@ -281,17 +293,7 @@
         },{
             p_id:'2587372271',
             p_startDay:'2013-08-16',
-            p_endDay:'2139-12-21',
-            p_name:'长虹一号',
-            p_total:'313222212311',
-            p_rest:'2224141412',
-            u_id:'23114',
-            u_id2:'23142',
-            p_status:1,
-        },{
-            p_id:'2587372271',
-            p_startDay:'2013-08-16',
-            p_endDay:'2139-12-21',
+            p_endDay:'2139-12-20',
             p_name:'长虹一号',
             p_total:'313222212311',
             p_rest:'2224141412',

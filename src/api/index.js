@@ -1,7 +1,7 @@
-import loginManageAPI from "./loginManageAPI";
+import loginAPI from "./loginAPI";
 import lkUAPI from "./LkUAPI";
 
 export default {
-  loginManageAPI,
+  loginAPI,
   lkUAPI
 }

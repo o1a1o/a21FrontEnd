@@ -94,22 +94,11 @@
             handleClick(tab, event) {
                 console.log(tab, event);
             },
-            login() {
-            request.post("/user/login", this.form).then(res => {
-                if(res.code === '0'){
-                this.$message({
-                    type:"success",
-                    message: "登录成功"
-                })
-                this.$router.push("/Home")
-                } else {
-                this.$message({
-                    type:"error",
-                    message: res.msg
-                })
-                }
-            })
-            },
+            // login_BP(){
+            //     this.$api.loginAPI.login(this.BPform,this).then(res =>{
+            //         // alert('/',response.data);
+            //     })
+            // },
             login_BP() {
                 const data={username : "123", keyword : "123"};
                 if(this.BPform.username===data.username&&this.BPform.keyword===data.keyword){
@@ -127,7 +116,24 @@
                 }
             }
         },
+        created() { // 组件创建成功的钩子函数
+        // 拿到要访问课程详情的课程id
+        let id = this.$route.params.pk || this.$route.query.pk || 1;
+        this.$axios({
+            url: `http://127.0.0.1:8000/course/detail/${id}/`, // 后台接口
+            method: 'get', // 请求方式
+        }).then(response => { // 请求成功
+            console.log('请求成功');
+            console.log(response.data);
+            this.course_ctx = response.data; // 将后台数据赋值给前台变量完成页面渲染
+        }).catch(error => { // 请求失败
+            console.log('请求失败');
+            console.log(error);
+        })
+        },
     })
+
+    
 </script>
 
 <style scoped>

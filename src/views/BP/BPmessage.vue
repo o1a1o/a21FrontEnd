@@ -8,11 +8,11 @@
                 tooltip-effect="dark"
                 @row-click="clickToXx"
                 style="width: 100%;"
-                height="800"
+                height="900"
                 @selection-change="handleSelectionChange">
                 <el-table-column
                 type="selection"
-                width="55">
+                width="100">
                 </el-table-column>
                 <el-table-column
                 prop="p_shenpiT"
@@ -26,37 +26,25 @@
                 label="产品编号"
                 sortable
                 align="center"
-                width="250"> 
+                width="320"> 
                 </el-table-column>
                 <el-table-column
                 prop="p_name"
                 align="center"
-                width="250"
+                width="300"
                 label="产品名称">
-                </el-table-column>
-                <el-table-column
-                prop="p_name"
-                align="center"
-                width="220"
-                label="发行金额">
-                </el-table-column>
-                <el-table-column
-                prop="p_risk"
-                align="center"
-                width="200"
-                label="风险等级">
                 </el-table-column>
                 <el-table-column
                 prop="p_status"
                 align="center"
                 :filters="[{text: '待审批', value: '待审批'}, {text: '已审批', value: '已审批'}]"
                 :filter-method="filterTag"
-                width="200"
+                width="250"
                 label="状态">
                 </el-table-column>
                 <el-table-column
                 align="center"
-                width="150"
+                width="250"
                 label="操作">
                 <!-- eslint-disable-next-line -->
                  <template slot="header" slot-scope="scope">
@@ -68,7 +56,7 @@
                  <!-- eslint-disable-next-line -->
                 <template slot-scope="scope">
                     <router-link  to="/BPalreadyxx">
-                        <el-button  size="mini" type="text" >审批</el-button>
+                        <el-button   type="text" >审批</el-button>
                     </router-link>
                 </template>
                 </el-table-column>
@@ -93,6 +81,9 @@
   margin-left: 20px;
   font-size: 15px;
 }
+.el-table{
+  font-size: 17px;
+}
 </style>
 
 <script>
@@ -104,123 +95,104 @@
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
             p_name:'定期存款111',
-            p_risk:'低',
             p_status:'待审批',
           },{
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
             p_name:'定期存款111',
-            p_risk:'低',
             p_status:'已审批',
           },
           {
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
             p_name:'定期存款111',
-            p_risk:'低',
             p_status:'待审批',
           },{
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
             p_name:'定期存款111',
-            p_risk:'低',
             p_status:'待审批',
           },
           {
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
             p_name:'定期存款111',
-            p_risk:'低',
             p_status:'已审批',
           },{
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
             p_name:'定期存款111',
-            p_risk:'低',
             p_status:'已审批',
           },
           {
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
             p_name:'定期存款111',
-            p_risk:'低',
             p_status:'已审批',
           },{
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
             p_name:'定期存款111',
-            p_risk:'低',
             p_status:'待审批',
           },
           {
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
             p_name:'定期存款111',
-            p_risk:'低',
             p_status:'待审批',
           },{
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
             p_name:'定期存款111',
-            p_risk:'低',
             p_status:'待审批',
           },{
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
             p_name:'定期存款111',
-            p_risk:'低',
             p_status:'已审批',
           },
           {
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
             p_name:'定期存款111',
-            p_risk:'低',
             p_status:'待审批',
           },{
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
             p_name:'定期存款111',
-            p_risk:'低',
             p_status:'待审批',
           },
           {
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
             p_name:'定期存款111',
-            p_risk:'低',
             p_status:'已审批',
           },{
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
             p_name:'定期存款111',
-            p_risk:'低',
             p_status:'已审批',
           },
           {
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
             p_name:'定期存款111',
-            p_risk:'低',
             p_status:'已审批',
           },{
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
             p_name:'定期存款111',
-            p_risk:'低',
             p_status:'待审批',
           },
           {
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
             p_name:'定期存款111',
-            p_risk:'低',
             p_status:'待审批',
           },{
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
             p_name:'定期存款111',
-            p_risk:'低',
             p_status:'待审批',
           }
         ],

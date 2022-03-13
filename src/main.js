@@ -12,6 +12,9 @@ import '@/assets/icon/iconfont.css'
 Vue.prototype.$echarts = echarts
 Vue.prototype.$api = api;
 
+import axios from 'axios'
+Vue.prototype.$axios = axios;
+
 Vue.use(ElementUI)
 /* eslint-disable no-new */
 new Vue({
