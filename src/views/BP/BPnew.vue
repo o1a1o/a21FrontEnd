@@ -99,6 +99,7 @@
 
 
 <div class="info" v-if="active==3">
+  <div ref="canvas" class="canves"></div>
   <!-- 1
   <bpmn-modeler
       ref="refNode"
@@ -124,6 +125,12 @@
     margin-left:10%;
     margin-top: 2%;
 }
+/*bpmn*/
+.canves {
+  width: 100%;
+  height: 100vh;
+}
+
 /* 表单 */
 .avatar-uploader .el-upload {
     border: 1px dashed #d9d9d9;
@@ -215,6 +222,10 @@
  
 </style>
 <script>
+  // bpmn
+  // import Modeler from '../../../node_modules/bpmn-js/lib/Viewer.js'
+  // import { xmlStr } from '../xmlData.js'
+
   // import BpmnModeler from 'bpmn-js/lib/Modeler';
   // import CustomPaletteProvider from './customPalette';
   // import camundaExtension from './resources/camunda';
@@ -242,6 +253,7 @@
         //   { name: "Music", id: "7" },
         //   { name: "Articles", id: "8" },
         // ],
+
 
         active: 1,
 
@@ -273,6 +285,7 @@
         }],
       }
     },
+
     methods: {
       
       // getModelDetail() {

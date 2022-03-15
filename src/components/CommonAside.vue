@@ -106,6 +106,15 @@
       return {
         activeIndex:'/YWhome',
         menu: [
+
+          /*bpmntrytry*/
+          {
+            path: "/Bpmn",
+            name: "Bpmn",
+            label: "Bpmn",
+            icon: "YWhome",
+          },
+
           {
             path: "/YWhome",
             name: "YWhome",
@@ -184,6 +193,7 @@
             icon: "YWhome",
           },
         
+          
         
         ],
       }
