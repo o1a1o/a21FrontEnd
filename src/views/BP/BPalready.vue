@@ -91,7 +91,6 @@
     margin:40px;
     margin-left: 75px;
     font-size: 20px;
-    /* padding-bottom:40px */
 }    
 .el-table{
     margin-left: 30px;
