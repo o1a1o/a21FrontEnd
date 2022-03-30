@@ -1,7 +1,6 @@
-import loginAPI from "./loginAPI";
-import lkUAPI from "./LkUAPI";
+
+import YWspAPI from "./YWspAPI.js"
 
 export default {
-  loginAPI,
-  lkUAPI
+  YWspAPI
 }

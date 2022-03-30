@@ -12,6 +12,10 @@ import '@/assets/icon/iconfont.css'
 Vue.prototype.$echarts = echarts
 Vue.prototype.$api = api;
 
+// 左边工具栏以及编辑节点的样式
+import 'bpmn-js-properties-panel/dist/assets/bpmn-js-properties-panel.css'
+import '../src/assets/css/custom.css'
+
 import axios from 'axios'
 Vue.prototype.$axios = axios;
 

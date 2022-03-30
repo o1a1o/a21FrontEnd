@@ -1,7 +1,6 @@
 <template>
-    <div>
-        <el-tabs type="border-card">
-        <el-tab-pane label="产品审批">
+    <div id="out">
+        产品审批
             <el-table
                 ref="multipleTable filterTable" 
                  :data="psData.filter(data => !search || data.p_id.toLowerCase().includes(search.toLowerCase()))"
@@ -62,19 +61,12 @@
                 </el-table-column>
             </el-table>
             <button @click="shenpiall" id="shenpiall">一键审批</button>
-        </el-tab-pane>
-        <el-tab-pane label="注册审批">
-            注册审批
-        </el-tab-pane>
-        </el-tabs>
+
     </div>
 </template>
 
 <style scoped>
-.el-tabs{
-    margin-left: 50px;
-    margin-top: 30px;
-}
+
 #shenpiall{
   margin-top: 50px;
   margin-bottom: 30px;
@@ -83,6 +75,11 @@
 }
 .el-table{
   font-size: 17px;
+  margin-top: 20px;
+}
+#out{
+  margin-left: 40px;
+  margin-top: 20px;
 }
 </style>
 

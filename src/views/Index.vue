@@ -40,4 +40,13 @@ export default {
   border-right:1px solid #dddddd;
   width: 1824px;
 }
+/**滚动条的宽度*/
+/deep/ ::-webkit-scrollbar {
+  width: 8px; 
+ 
+}
+/deep/ ::-webkit-scrollbar-thumb {
+  background-color: #eaecf1;
+  border-radius: 3px;
+}
 </style>

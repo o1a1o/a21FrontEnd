@@ -3,13 +3,12 @@
         <el-card id="home">
             <div id="top">
                 <span>推荐产品设置</span>
-                
             </div>
              <el-table
             ref="multipleTable"
             :data="showData"
             tooltip-effect="dark"
-            style="width: 100%"
+            style="font-size:16px"
             @selection-change="handleSelectionChange">
             <el-table-column
             type="selection"
@@ -93,11 +92,21 @@
             </template>
             </el-table-column>
         </el-table>
+        <!-- <el-pagination
+            @size-change="handleSizeChange"
+            @current-change="handleCurrentChange"
+            :current-page="currentPage"
+            :page-sizes="[100, 200, 300, 400]"
+            :page-size="100"
+            layout="total, sizes, prev, pager, next, jumper"
+            :total="400">
+        </el-pagination> -->
         </el-card>
     </div>
 </template>
 
 <script>
+import axios from "../../axios/axios.js";;
   export default {
     data() {
       return {
@@ -364,6 +373,31 @@
             p_status:1,
         }],
       }
+    },
+    methods:{
+        loadShowData(){
+            this.$api.YWspAPI.load(this).then(res=>{
+                console.log(this.showData);
+            }).catch(err=>{
+                console.log(err);
+            });
+        },
+        handleSizeChange(val) {
+        console.log(`每页 ${val} 条`);
+        },
+        handleCurrentChange(val) {
+        console.log(`当前页: ${val}`);
+        }
+        // loadHr(){
+        // this.$api.userAPI.load(this, "hr").then(res =>{
+        //   console.log(this.HRtableData);
+        // }).catch(err => {
+        //   console.log(err);
+        // });
+        // },
+    },
+    created(){
+        this.loadShowData();
     }
   };
 </script>

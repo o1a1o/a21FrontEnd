@@ -91,14 +91,17 @@
   }
  
   /* 选中后样式 */
-   .el-menu-item.is-active {
-        /* border-left:#006EFF solid 6px !important; */
-        background-color: #006EFF !important;
-        color: white !important;
-    }
-     .el-menu-item:hover {
-        border-left:#006EFF solid 6px !important;
-    }
+  .el-menu-item.is-active {
+      /* border-left:#006EFF solid 6px !important; */
+      background-color: #006EFF !important;
+      color: white !important;
+  }
+    .el-menu-item:hover {
+      border-left:#006EFF solid 6px !important;
+  }
+
+  
+
 </style>
 <script>
   export default {
@@ -107,13 +110,7 @@
         activeIndex:'/YWhome',
         menu: [
 
-          /*bpmntrytry*/
-          {
-            path: "/Bpmn",
-            name: "Bpmn",
-            label: "Bpmn",
-            icon: "YWhome",
-          },
+          
 
           {
             path: "/YWhome",
@@ -134,16 +131,15 @@
             icon: "YWshowProduct",
 
           },
+          // {
+          //   path: "/YWmessage",
+          //   name: "YWmessage",
+          //   label: "消息中心",
+          //   icon: "YWmessage",
+          // },
           {
-            path: "/YWmessage",
-            name: "YWmessage",
-            label: "消息中心",
-            icon: "YWmessage",
-
-          },
-          {
-            path: "/YWcustomer",
-            name: "YWcustomer",
+            path: "/customers",
+            name: "customers",
             label: "客户页面",
             icon: "YWcustomer",
 
@@ -154,7 +150,13 @@
             label: "个人信息",
             icon: "YWgeren",
           },
-
+          /*bpmntrytry*/
+          {
+            path: "/Bpmn",
+            name: "Bpmn",
+            label: "Bpmn",
+            icon: "YWhome",
+          },
 
           {
             path: "/BPhome",

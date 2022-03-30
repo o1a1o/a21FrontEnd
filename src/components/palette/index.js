@@ -11,3 +11,10 @@ export default {
   __init__: ['customPaletteProvider'], // 调用 customPaletteProvider 来初始化
   customPaletteProvider: ['type', PaletteProvider]
 }
+
+// import customPaletteProvider from "./paletteProvider";
+// export default {
+//   __init__: ["paletteProvider"],
+//   paletteProvider: ["type", customPaletteProvider]
+// };
+

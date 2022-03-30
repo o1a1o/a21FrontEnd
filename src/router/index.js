@@ -64,13 +64,13 @@ export default new Router({
           component:()=>import('../views/YW/YWmessage.vue'),
         },
         {
-          path: "/YWcustomer",
-          name: "YWcustomer",
+          path: "/customers",
+          name: "customers",
           component:()=>import('../views/YW/YWcustomer.vue'),
         },
         {
-          path:'/YWcxx',
-          name:'YWcxx',
+          path:'/customers/{id}/customer',
+          name:'customer',
           component:()=>import('../views/YW/YWcxx.vue'),
         },
         {

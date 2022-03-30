@@ -1,11 +1,29 @@
 <template>
   <div class="bpmn-container">
-    <div ref="canvas"
-      class="canves"></div>
+
+    <div ref="palette"></div>
+
+    <div ref="canvas" class="canves"></div>
+          <!-- 工具栏显示的地方 -->
+    <div id="js-properties-panel" class="panel"></div>
+
   </div>
 </template>
 
 <script>
+
+// 工具栏相关
+// import propertiesProviderModule from "bpmn-js-properties-panel/lib/provider/camunda";
+// import propertiesPanelModule from "bpmn-js-properties-panel";
+// import camundaModdleDescriptor from "camunda-bpmn-moddle/resources/camunda";
+
+import 'bpmn-js-properties-panel/dist/assets/bpmn-js-properties-panel.css' // 右边工具栏样式
+ // 这里引入的是右侧属性栏这个框
+import propertiesPanelModule from 'bpmn-js-properties-panel'
+// 而这个引入的是右侧属性栏里的内容
+import propertiesProviderModule from 'bpmn-js-properties-panel/lib/provider/camunda'
+
+
 import Modeler from 'bpmn-js/lib/Modeler'
 import 'bpmn-js/dist/assets/diagram-js.css' // 左边工具栏以及编辑节点的样式
 import 'bpmn-js/dist/assets/bpmn-font/css/bpmn.css'
@@ -32,6 +50,7 @@ export default {
 
     this.bpmnModeler = new Modeler({
       container: this.$refs.canvas,
+      paletteContainer: this.$refs.palette,
       paletteEntries,
       additionalModules: [customPalette, customRenderer, customContextPad, customRules]
     })

@@ -2,15 +2,16 @@
 
     <div id="select">
         <!-- <div>
-             <span>筛选查询</span>
+            <div id="datalist">筛选查询</div>
         </div> -->
         <div >  
             <div id="datalist">数据列表</div>
              <el-table
                  border
+                :header-cell-style="{background:'#FAFAFA', fontSize: '18px'}"
                  :model="xxData"
                 :data="xxData.filter(data => !search || data.p_name.toLowerCase().includes(search.toLowerCase()))"
-                style="width: 100%">
+                style="width: 100%;font-size:15px;">
                 <el-table-column
                 prop="p_id"
                 align="center"
@@ -68,15 +69,16 @@
                 width="150">
                 </el-table-column>
                 <el-table-column
+                label="操作"
                 align="center"
                 width="150">
-                <!-- eslint-disable-next-line -->
+                <!-- eslint-disable-next-line
                   <template slot="header" slot-scope="scope">
                     <el-input
                     v-model="search"
                     size="mini"
                     placeholder="输入产品名称搜索"/>
-                </template>
+                </template> -->
                 <!-- eslint-disable-next-line -->
                 <template slot-scope="scope">
                     <router-link  to="/YWalreadyxx">
@@ -110,6 +112,9 @@
     },
     data() {
       return {
+        name: "",
+		age: "",
+		search: "",
         xxData: [{
             p_id:'2587372271',
             p_startDay:'2013-08-16',
@@ -375,12 +380,7 @@
       }
     },
     methods:{
-        // handleSizeChange(val) {
-        //     console.log(`每页 ${val} 条`);
-        // },
-        // handleCurrentChange(val) {
-        //     console.log(`当前页: ${val}`);
-        // },
+        
        
     }
   }

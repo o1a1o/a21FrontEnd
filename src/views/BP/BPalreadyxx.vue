@@ -21,7 +21,7 @@
             </div>
             <el-tag style="width:270px">产品销售情况与利率统计</el-tag>
             <div></div>
-            <el-tag>产品购买流程</el-tag>
+            <!-- <el-tag>产品购买流程</el-tag> -->
         </div>
     </div>
 </template>

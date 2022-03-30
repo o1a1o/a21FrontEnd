@@ -35,7 +35,7 @@
             width="300">
              <!-- eslint-disable-next-line -->
                 <template slot-scope="scope">
-                    <router-link  to="/YWcxx">
+                    <router-link  to="/customers/{id}/customer">
                         <el-button  type="text" >查看详情</el-button>
                     </router-link>
                 </template>

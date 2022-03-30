@@ -1,15 +1,20 @@
 <template>
   <header>
     <p id="tit">Welcome ！</p>
-    <el-avatar icon="el-icon-user-solid" style="position:relative;left:750px"></el-avatar>
-    <div id="logout" @click="logout">
-      退出
+    <div id="out">
+      <el-avatar icon="el-icon-user-solid" ></el-avatar>
+      <div id="logout" @click="logout">
+        退出
+      </div>
     </div>
+    
   </header>
 </template>
 
 <style scoped>
 header{
+  /* background:url('../img/bankback.jpg'); */
+  background-color: #c2ccd0;
   width: 1820px;
   display:flex;
   justify-content: space-between;
@@ -32,6 +37,14 @@ header{
 }
 #logout:hover{
   color: blue;
+}
+#out{
+  background-color: #DDDDDD;
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  position: relative;
+  top: -5px;
 }
 </style>
 

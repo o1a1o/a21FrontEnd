@@ -2,7 +2,7 @@
   <div>
     <el-card>
       <div style="width:200px;height:80px">
-          <router-link  to="/YWcustomer" style="text-decoration:none;color:black;padding:20px;top:20px;position:relative"><i class="el-icon-arrow-left" style="font-size:20px"></i><span style="font-size:20px;" >返回</span> </router-link>
+          <router-link  to="/customers" style="text-decoration:none;color:black;padding:20px;top:20px;position:relative"><i class="el-icon-arrow-left" style="font-size:20px"></i><span style="font-size:20px;" >返回</span> </router-link>
       </div>
       <br>
       <el-tag>客户基础信息</el-tag>

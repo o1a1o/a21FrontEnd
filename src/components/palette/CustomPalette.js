@@ -428,7 +428,7 @@ Palette.HTML_MARKUP =
   '<div class="djs-palette-toggle"></div>' +
   '</div>'
 
-// helpers //////////////////////
+// helpers
 
 function addClasses (element, classNames) {
   var classes = domClasses(element)
@@ -454,3 +454,15 @@ function addPaletteEntries (entries, provider) {
 }
 
 
+//add
+function createTask() {
+  return function(event) {
+      const businessObject = bpmnFactory.create('bpmn:Task');
+      const shape = elementFactory.createShape({
+          type: 'bpmn:Task',
+          businessObject
+      });
+      console.log(shape) // 只在拖动或者点击时触发
+      create.start(event, shape);
+  }
+}
