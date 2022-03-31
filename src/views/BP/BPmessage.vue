@@ -1,13 +1,12 @@
 <template>
     <div id="out">
-        产品审批
+        <!-- 产品审批 -->
             <el-table
                 ref="multipleTable filterTable" 
                  :data="psData.filter(data => !search || data.p_id.toLowerCase().includes(search.toLowerCase()))"
                 tooltip-effect="dark"
                 @row-click="clickToXx"
                 style="width: 100%;"
-                height="900"
                 @selection-change="handleSelectionChange">
                 <el-table-column
                 type="selection"
@@ -60,8 +59,18 @@
                 </template>
                 </el-table-column>
             </el-table>
+            <div class="paginationClass">
+              <el-pagination @size-change="handleSizeChange"
+                            @current-change="handleCurrentChange"
+                            :current-page="page.currentPage"
+                            :page-sizes="[15]"
+                            :page-size="page.pageSize"
+                            layout="total, sizes, prev, pager, next, jumper"
+                            :total="psDataAll.length">
+              </el-pagination>
+            </div>
             <button @click="shenpiall" id="shenpiall">一键审批</button>
-
+            
     </div>
 </template>
 
@@ -75,10 +84,14 @@
 }
 .el-table{
   font-size: 17px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 #out{
   margin-left: 40px;
+  margin-top: 20px;
+}
+.paginationClass{
+  margin-left: 20px;
   margin-top: 20px;
 }
 </style>
@@ -87,7 +100,12 @@
   export default {
     data() {
       return {
-        psData: [
+        psData:[],
+        page: {
+          currentPage: 1,
+          pageSize: 15
+        },
+        psDataAll: [
           {
             p_shenpiT:'2019-10-29 21:20:02',
             p_id:'898112312421798',
@@ -197,7 +215,10 @@
         multipleSelection: [],
       }
     },
-
+    mounted() {
+      let psDataAll = JSON.parse(JSON.stringify(this.psDataAll));
+      this.psData = psDataAll.splice(0, 15);
+    },
     methods: {
       //多选
       toggleSelection(rows) {
@@ -225,7 +246,28 @@
       },
       clickToXx(){
         this.$router.push({ name: "BPmes1xx" });
-      }
+      },
+      handleSizeChange(pageSize) {
+        // 每页条数切换
+        this.page.pageSize = pageSize;
+        this.handleCurrentChange(this.page.currentPage);
+      },
+      handleCurrentChange(currentPage) {
+        //页码切换
+        this.page.currentPage = currentPage;
+        this.currentChangePage(this.psDataAll, currentPage);
+      },
+      //分页方法（重点）
+      currentChangePage(list, currentPage) {
+        let from = (currentPage - 1) * this.page.pageSize;
+        let to = currentPage * this.page.pageSize;
+        this.psData = [];
+        for (;from < to; from++) {
+          if (list[from]) {
+            this.psData.push(list[from]);
+          }
+        }
+      },
     }
   }
 </script>

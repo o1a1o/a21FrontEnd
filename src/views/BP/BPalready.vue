@@ -83,6 +83,16 @@
                 </el-table-column>
             </el-table>
         </div>
+        <div class="paginationClass">
+            <el-pagination @size-change="handleSizeChange"
+                            @current-change="handleCurrentChange"
+                            :current-page="page.currentPage"
+                            :page-sizes="[12]"
+                            :page-size="page.pageSize"
+                            layout="total, sizes, prev, pager, next, jumper"
+                            :total="xxDataAll.length">
+            </el-pagination>
+        </div>
     </div>
 </template>
 
@@ -94,6 +104,10 @@
 }    
 .el-table{
     margin-left: 30px;
+}
+.paginationClass{
+    margin-top: 30px;
+    margin-left: 50px;
 }
 
 </style>
@@ -107,7 +121,12 @@
     },
     data() {
       return {
-        xxData: [{
+        page: {
+            currentPage: 1,
+            pageSize: 12
+        },
+        xxData:[],
+        xxDataAll: [{
             p_id:'2587372271',
             p_startDay:'2013-08-16',
             p_endDay:'2139-12-21',
@@ -371,14 +390,32 @@
         search: ''
       }
     },
-    methods:{
-        // handleSizeChange(val) {
-        //     console.log(`每页 ${val} 条`);
-        // },
-        // handleCurrentChange(val) {
-        //     console.log(`当前页: ${val}`);
-        // },
-       
-    }
+    mounted() {
+        let xxDataAll = JSON.parse(JSON.stringify(this.xxDataAll));
+        this.xxData =xxDataAll.splice(0, 12);
+    },
+     methods: {
+        handleSizeChange(pageSize) {
+        // 每页条数切换
+        this.page.pageSize = pageSize;
+        this.handleCurrentChange(this.page.currentPage);
+        },
+        handleCurrentChange(currentPage) {
+        //页码切换
+        this.page.currentPage = currentPage;
+        this.currentChangePage(this.xxDataAll, currentPage);
+        },
+        //分页方法（重点）
+        currentChangePage(list, currentPage) {
+        let from = (currentPage - 1) * this.page.pageSize;
+        let to = currentPage * this.page.pageSize;
+        this.xxData = [];
+        for (;from < to; from++) {
+            if (list[from]) {
+            this.xxData.push(list[from]);
+            }
+        }
+        },
+    },
   }
 </script>

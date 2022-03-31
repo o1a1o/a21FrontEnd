@@ -75,7 +75,7 @@
             prop="p_status"
             label="销售状态"
             align="center"
-            width="150">
+            width="120">
             </el-table-column>
             <el-table-column
             align="center"
@@ -92,26 +92,35 @@
             </template>
             </el-table-column>
         </el-table>
-        <!-- <el-pagination
-            @size-change="handleSizeChange"
-            @current-change="handleCurrentChange"
-            :current-page="currentPage"
-            :page-sizes="[100, 200, 300, 400]"
-            :page-size="100"
-            layout="total, sizes, prev, pager, next, jumper"
-            :total="400">
-        </el-pagination> -->
+        <div class="paginationClass">
+            <el-pagination @size-change="handleSizeChange"
+                @current-change="handleCurrentChange"
+                :current-page="page.currentPage"
+                :page-sizes="[12]"
+                :page-size="page.pageSize"
+                layout="total, sizes, prev, pager, next, jumper"
+                :total="showDataAll.length">
+            </el-pagination>
+        </div>
         </el-card>
     </div>
 </template>
 
 <script>
-import axios from "../../axios/axios.js";;
+// import axios from "../../axios/axios.js";;
   export default {
+    mounted() {
+        let showDataAll = JSON.parse(JSON.stringify(this.showDataAll));
+        this.showData = showDataAll.splice(0, 12);
+    },
     data() {
       return {
-        value: true,
-        showData: [{
+        showData:[],
+        page: {
+            currentPage: 1,
+            pageSize: 12
+        },
+        showDataAll: [{
             p_id:'2587372271',
             p_startDay:'2013-08-16',
             p_endDay:'2139-12-21',
@@ -377,17 +386,34 @@ import axios from "../../axios/axios.js";;
     methods:{
         loadShowData(){
             this.$api.YWspAPI.load(this).then(res=>{
-                console.log(this.showData);
+                console.log(this.showDataALl);
             }).catch(err=>{
                 console.log(err);
             });
         },
-        handleSizeChange(val) {
-        console.log(`每页 ${val} 条`);
+
+        handleSizeChange(pageSize) {
+        // 每页条数切换
+        this.page.pageSize = pageSize;
+        this.handleCurrentChange(this.page.currentPage);
         },
-        handleCurrentChange(val) {
-        console.log(`当前页: ${val}`);
+        handleCurrentChange(currentPage) {
+        //页码切换
+        this.page.currentPage = currentPage;
+        this.currentChangePage(this.showDataAll, currentPage);
+        },
+        //分页方法（重点）
+        currentChangePage(list, currentPage) {
+        let from = (currentPage - 1) * this.page.pageSize;
+        let to = currentPage * this.page.pageSize;
+        this.showData = [];
+        for (;from < to; from++) {
+            if (list[from]) {
+            this.showData.push(list[from]);
+            }
         }
+        },
+
         // loadHr(){
         // this.$api.userAPI.load(this, "hr").then(res =>{
         //   console.log(this.HRtableData);
@@ -407,5 +433,12 @@ import axios from "../../axios/axios.js";;
     margin-top: 15px;
     margin-left: 15px;
     width: 1780px;
+}
+#top span{
+    margin-left: 20px;
+}
+.paginationClass{
+    margin-top: 20px;
+    margin-left: 20px;
 }
 </style>
