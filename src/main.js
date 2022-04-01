@@ -16,6 +16,11 @@ Vue.prototype.$api = api;
 import 'bpmn-js-properties-panel/dist/assets/bpmn-js-properties-panel.css'
 import '../src/assets/css/custom.css'
 
+
+import "bpmn-js/dist/assets/diagram-js.css";
+import "bpmn-js/dist/assets/bpmn-font/css/bpmn.css";
+import "bpmn-js/dist/assets/bpmn-font/css/bpmn-codes.css";
+
 import axios from 'axios'
 Vue.prototype.$axios = axios;
 

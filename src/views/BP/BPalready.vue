@@ -85,12 +85,12 @@
         </div>
         <div class="paginationClass">
             <el-pagination @size-change="handleSizeChange"
-                            @current-change="handleCurrentChange"
-                            :current-page="page.currentPage"
-                            :page-sizes="[12]"
-                            :page-size="page.pageSize"
-                            layout="total, sizes, prev, pager, next, jumper"
-                            :total="xxDataAll.length">
+                @current-change="handleCurrentChange"
+                :current-page="page.currentPage"
+                :page-sizes="[12]"
+                :page-size="page.pageSize"
+                layout="total, sizes, prev, pager, next, jumper"
+                :total="xxDataAll.length">
             </el-pagination>
         </div>
     </div>
@@ -109,7 +109,6 @@
     margin-top: 30px;
     margin-left: 50px;
 }
-
 </style>
 
 <script>

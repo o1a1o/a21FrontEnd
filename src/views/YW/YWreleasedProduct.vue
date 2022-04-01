@@ -122,7 +122,7 @@
 
 <script>
   export default {
-     mounted() {
+    mounted() {
         let xxDataAll = JSON.parse(JSON.stringify(this.xxDataAll));
         this.xxData =xxDataAll.splice(0, 12);
     },

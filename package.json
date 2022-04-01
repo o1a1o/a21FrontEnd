@@ -16,6 +16,8 @@
     "axios": "^0.24.0",
     "bpmn-js": "^9.0.3",
     "bpmn-js-properties-panel": "^0.46.0",
+    "bpmn-js-sketchy": "^0.5.3",
+    "bpmn-js-task-resize": "^1.2.0",
     "camunda-bpmn-moddle": "^6.1.2",
     "echarts": "^5.2.2",
     "element-ui": "^2.15.6",

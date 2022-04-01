@@ -38,6 +38,11 @@ export default new Router({
           name:'Bpmn',
           component:()=>import('../components/Bpmn.vue'),
         },
+        // {
+        //   path:'/bpmn1',
+        //   name:'bpmn1',
+        //   component:()=>import('../components/bpmn1.vue'),
+        // },
         {
           path: "/YWhome",
           name: "YWhome",
